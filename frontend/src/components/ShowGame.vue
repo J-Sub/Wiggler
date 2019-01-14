@@ -1,5 +1,6 @@
 <template>
   <div id="showGame">
+    <p>{{ username }}</p>
     <PhaserGame />
   </div>
 </template>
@@ -11,13 +12,13 @@ import PhaserGame from './PhaserGame.vue'
 export default {
   name: 'showgame',
   components: { 
-    'PhaserGame': PhaserGame 
-  },
+    'PhaserGame': PhaserGame
+  }, 
   data () {
     return {
-
+      username: this.$route.query.userName
     }
-  },
+  }
 }
 </script>
 

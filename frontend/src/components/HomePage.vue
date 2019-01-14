@@ -22,7 +22,7 @@
       <v-btn id="readyButton" color="#ea7420" round=true
             v-on:mouseenter="textChange()"
             v-on:mouseleave="textReChange()"
-            v-on:click.prevent="gameRender()">{{ ready }}</v-btn>
+            v-on:click="gameRender()">{{ ready }}</v-btn>
       <div id="github">
         <a v-bind:href="git_repo">
           {{ git_repo }}<images></images>
@@ -66,7 +66,7 @@ export default {
       // render real game
       const userName = this.$refs.nameInput.value // list of all references in our page
       const router = this.$router
-      router.push('/api/showGame')
+      router.push({ path: '/api/showGame', query: { userName: userName }})
     }
   },
   components: {
