@@ -1,31 +1,36 @@
 <template>
   <div id="showGame">
-    GAMEGMEGMAGMEAMGEA
-      <p>{{ message }}</p>
-      helllloooooo~~~
+    <PhaserGame />
   </div>
 </template>
 
+
 <script>
+import PhaserGame from './PhaserGame.vue'
+
 export default {
-  created: function() {
-    // this.$http.get('/api/showGame').then((res) => {
-    //   this.message = res.data
-    // })
+  name: 'showgame',
+  components: { 
+    'PhaserGame': PhaserGame 
   },
   data () {
     return {
-      message: ''
+
     }
   },
-  methods: {
-  }
 }
 </script>
 
-<style>
+
+<style scoped>
 * {
   margin: 0;
   padding: 0;
+}
+
+#showGame {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 </style>
